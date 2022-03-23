@@ -57,8 +57,8 @@ function addC() {
 
         row.appendChild(addCell);
 
-        numRows++;
         numCols++;
+        numRows++;
 
     } else {
 
@@ -82,11 +82,16 @@ function removeR() {
 
     const table = document.querySelector("#grid");
 
-    table.removeChild(document.getElementById("grid").lastChild);
+    table.removeChild(table.lastChild);
 
     numRows--;
 
-    if (numRows <= 0) {
+    if (numRows === 0) {
+
+        while (table.hasChildNodes()) {
+            table.removeChild(table.lastChild);
+        }
+
         numRows = 0;
         numCols = 0;
     }
@@ -95,7 +100,28 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+
+    if (numCols === 0) return;
+
+    const table = document.querySelector("#grid");
+    const rows = document.querySelectorAll("tr");
+
+    for (let i = 0; i < numRows; i++) {
+        rows[i].removeChild(rows[i].lastChild);
+    }
+
+    numCols--;
+
+    if (numCols === 0) {
+
+        while (table.hasChildNodes()) {
+            table.removeChild(table.lastChild);
+        }
+
+        numCols = 0;
+        numRows = 0;
+    }
+
 }
 
 // Set global variable for selected color
