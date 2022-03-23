@@ -78,13 +78,13 @@ function addC() {
 // Remove a row
 function removeR() {
 
+    if (numRows === 0) return;
+
     const table = document.querySelector("#grid");
 
     table.removeChild(document.getElementById("grid").lastChild);
 
     numRows--;
-
-    if (numRows === 0) numCols = 0;
 
 }
 
