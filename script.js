@@ -92,8 +92,8 @@ function removeR() {
             table.removeChild(table.lastChild);
         }
 
-        numRows = 0;
         numCols = 0;
+
     }
 
 }
@@ -118,8 +118,8 @@ function removeC() {
             table.removeChild(table.lastChild);
         }
 
-        numCols = 0;
         numRows = 0;
+
     }
 
 }
