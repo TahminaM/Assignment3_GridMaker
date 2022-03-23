@@ -86,6 +86,11 @@ function removeR() {
 
     numRows--;
 
+    if (numRows <= 0) {
+        numRows = 0;
+        numCols = 0;
+    }
+
 }
 
 // Remove a column
