@@ -62,7 +62,6 @@ function addC() {
 
     } else {
 
-
         const row = document.querySelectorAll("tr");
 
         for (let i = 0; i < numRows; i++) {
