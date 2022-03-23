@@ -60,8 +60,6 @@ function addC() {
         numRows++;
         numCols++;
 
-        console.log(numRows + ' ' + numCols);
-
     } else {
 
 
@@ -70,13 +68,10 @@ function addC() {
         for (let i = 0; i < numRows; i++) {
             
             let cell = document.createElement("td");
-
-            
+            row[i].appendChild(cell);
         }
 
         numCols++;
-
-        console.log(numRows + ' ' + numCols);
 
     }
 }
