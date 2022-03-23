@@ -22,26 +22,58 @@ function addR() {
         numCols++;
 
     } else {
+
         const table = document.querySelector("#grid");
 
         let addRow = document.createElement("tr");
-        let cell = document.createElement("td");
 
         table.appendChild(addRow);
 
         const row = document.querySelectorAll("tr");
 
         for (let i = 0; i < numCols; i++) {
+
+            let cell = document.createElement("td");
             row[numRows].appendChild(cell);
         }
 
         numRows++;
+
     }
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    if (numRows === 0 && numCols === 0) {
+
+        const table = document.querySelector("#grid");
+
+        let addRow = document.createElement("tr");
+        let addCell = document.createElement("td");
+
+        table.appendChild(addRow);
+
+        const row = document.querySelector("tr");
+
+        row.appendChild(addCell);
+
+        numRows++;
+        numCols++;
+
+    } else {
+
+
+        const row = document.querySelectorAll("tr");
+
+        for (let i = 0; i < numRows; i++) {
+            
+            let cell = document.createElement("td");
+            row[i].appendChild(cell);
+        }
+
+        numCols++;
+
+    }
 }
 
 // Remove a row
