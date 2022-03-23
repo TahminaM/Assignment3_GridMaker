@@ -77,7 +77,13 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+
+    const table = document.querySelector("#grid");
+
+    table.removeChild(document.getElementById("grid").lastChild);
+
+    numRows--;
+
 }
 
 // Remove a column
