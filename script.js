@@ -5,7 +5,38 @@ let colorSelected;
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    if (numRows === 0 && numCols === 0) {
+
+        const table = document.querySelector("#grid");
+
+        let addRow = document.createElement("tr");
+        let addCell = document.createElement("td");
+
+        table.appendChild(addRow);
+
+        const row = document.querySelector("tr");
+
+        row.appendChild(addCell);
+
+        numRows++;
+        numCols++;
+
+    } else {
+        const table = document.querySelector("#grid");
+
+        let addRow = document.createElement("tr");
+        let cell = document.createElement("td");
+
+        table.appendChild(addRow);
+
+        const row = document.querySelectorAll("tr");
+
+        for (let i = 0; i < numCols; i++) {
+            row[numRows].appendChild(cell);
+        }
+
+        numRows++;
+    }
 }
 
 // Add a column
