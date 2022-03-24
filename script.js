@@ -138,6 +138,8 @@ function fillU(){
 // Fill all cells
 function fillAll(){
     let row = document.getElementsByTagName("td"); 
+    for (let i = 0; i < row.length; i++) {
+        row[i].style.backgroundColor = colorSelected;  
 }
 
 // Clear all cells
