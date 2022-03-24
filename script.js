@@ -132,9 +132,9 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    let row = document.getElementsByTagName("td"); 
+    let row = document.getElementsByTagName("td"); //get array of all cells
     for (let i = 0; i < row.length; i++){
-        if(!row[i].style.backgroundColor){
+        if(!row[i].style.backgroundColor){ //if the cell has no color then we set the color to the color selected
             row[i].style.backgroundColor = colorSelected;
         }
     }
