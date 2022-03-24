@@ -137,7 +137,7 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    let row = document.getElementsByTagName("td"); 
 }
 
 // Clear all cells
