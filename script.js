@@ -137,9 +137,11 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    let row = document.getElementsByTagName("td"); 
+    let row = document.getElementsByTagName("td"); //get array of all cells
+    
     for (let i = 0; i < row.length; i++) {
-        row[i].style.backgroundColor = colorSelected;  
+        row[i].style.backgroundColor = colorSelected; // fills the cell with the color selected 
+    }    
 }
 
 // Clear all cells
