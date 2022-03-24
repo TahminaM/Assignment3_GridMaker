@@ -142,5 +142,8 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
-}
+    let row = document.getElementsByTagName("td"); 
+    for (let i = 0; i < row.length; i++) {
+        row[i].style.removeProperty("background-color"); 
+    }
+}     
