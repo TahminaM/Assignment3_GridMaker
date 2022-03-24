@@ -133,6 +133,9 @@ function selectColor(){
 // Fill all uncolored cells
 function fillU(){
     let row = document.getElementsByTagName("td");
+    for (let i = 0; i < row.length; i++){
+        
+    }
 }
 
 // Fill all cells
