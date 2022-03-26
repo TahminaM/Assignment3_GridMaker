@@ -1,7 +1,8 @@
 // Declare global variables
 let numRows = 0;
 let numCols = 0;
-let colorSelected; 
+let colorSelected;
+
 
 // Add a row
 function addR() {
@@ -16,6 +17,7 @@ function addR() {
 
         const row = document.querySelector("tr");
 
+        addCell.addEventListener("click", clickColor);
         row.appendChild(addCell);
 
         numRows++;
@@ -34,7 +36,9 @@ function addR() {
         for (let i = 0; i < numCols; i++) {
 
             let cell = document.createElement("td");
+            cell.addEventListener("click", clickColor);
             row[numRows].appendChild(cell);
+
         }
 
         numRows++;
@@ -55,6 +59,7 @@ function addC() {
 
         const row = document.querySelector("tr");
 
+        addCell.addEventListener("click", clickColor);
         row.appendChild(addCell);
 
         numCols++;
@@ -67,7 +72,9 @@ function addC() {
         for (let i = 0; i < numRows; i++) {
             
             let cell = document.createElement("td");
+            cell.addEventListener("click", clickColor);
             row[i].appendChild(cell);
+
         }
 
         numCols++;
@@ -128,6 +135,10 @@ function removeC() {
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
+}
+
+function clickColor() {
+    this.style.backgroundColor = colorSelected;
 }
 
 // Fill all uncolored cells
