@@ -91,11 +91,8 @@ function removeR() {
         while (table.hasChildNodes()) {
             table.removeChild(table.lastChild);
         }
-
         numCols = 0;
-
     }
-
 }
 
 // Remove a column
@@ -119,10 +116,9 @@ function removeC() {
         }
 
         numRows = 0;
-
     }
-
 }
+
 
 // Set global variable for selected color
 function selectColor(){
@@ -130,10 +126,10 @@ function selectColor(){
     console.log(colorSelected);
 }
 
+
 // Fill all uncolored cells
 function fillU(){
-    let row = document.getElementsByTagName("td"); //get array of all cells
-    
+    let row = document.getElementsByTagName("td"); //get array of all cells  
     for (let i = 0; i < row.length; i++){
         if(!row[i].style.backgroundColor){ //if the cell has no color then we set the color to the colorselected
             row[i].style.backgroundColor = colorSelected;
@@ -141,20 +137,23 @@ function fillU(){
     }
 }
 
+
 // Fill all cells
 function fillAll(){
-    let row = document.getElementsByTagName("td"); //get array of all cells
-    
+    let row = document.getElementsByTagName("td"); //get array of all cells   
     for (let i = 0; i < row.length; i++) {
         row[i].style.backgroundColor = colorSelected; // fills the cell with the color selected 
     }    
 }
 
+
 // Clear all cells
 function clearAll(){
     let row = document.getElementsByTagName("td"); //get array of all cells
-
     for (let i = 0; i < row.length; i++) {
         row[i].style.removeProperty("background-color"); // remove the backgroundColor 
     }
-}     
+}  
+
+
+

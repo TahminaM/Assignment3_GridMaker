@@ -17,8 +17,9 @@ button,select{
     background-color:#f4f6f7 ;
     border-radius: 25%;
     box-sizing: border-box;
+    height: 35px;  
     color: black;
-    border: 2px solid #d9e4e0; 
+    border: 2px solid #535b6b; 
     font-size:medium;
     font-style:bold;
 }
